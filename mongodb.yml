@@ -1,0 +1,9 @@
+- name: Deployment Prerequisites — MongoDB
+  hosts: all
+  gather_facts: yes
+  become: yes
+
+  tasks:
+    - name: Configure Linux for MongoDB
+      import_role:
+        name: mongodb

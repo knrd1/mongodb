@@ -1,0 +1,7 @@
+- name: Make sure glibc library is the latest
+  package:
+    name: "{{ gnu_c_lib }}"
+    state: latest
+  register: _pkg
+  until: _pkg is succeeded
+  retries: 3

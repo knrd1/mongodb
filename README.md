@@ -1,11 +1,13 @@
 # Deployment Prerequisites — MongoDB
 
-Configure Linux OS as advised in the MongoDB Production Notes:
+Configure Linux OS for MongoDB deployment
 
 ```
 - Disable SELINUX
 - Install and configure chronyd
-- Install latest glibc
+- Install latest glibc and numactl
 - Set various sysctl values
 - Disable Transparet Huge Pages
+- Set ulimit values for MongoDB user
+- 
 ```

@@ -1,0 +1,11 @@
+- name: Set limits
+  community.general.pam_limits:
+    domain: "{{ item[0] }}"
+    limit_type: "{{ item[1] }}"
+    limit_item: "{{ item[2] }}"
+    value: "{{ item[3] }}"
+  with_nested:
+    - ["{{ mongodb_user }}"]
+    - ["hard", "soft"]
+    - ["nproc", "nofile"]
+    - ["64000"]

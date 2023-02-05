@@ -1,6 +1,6 @@
 - name: Make sure glibc library is the latest
   package:
-    name: "{{ gnu_c_lib }}"
+    name: "{{ glibc_pkg }}"
     state: latest
   register: _pkg
   until: _pkg is succeeded
@@ -8,7 +8,7 @@
 
 - name: Make sure numactl is installed
   package:
-    name: "{{ numactl }}"
+    name: "{{ numactl_pkg }}"
     state: latest
   register: _pkg
   until: _pkg is succeeded

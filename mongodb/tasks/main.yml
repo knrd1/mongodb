@@ -1,16 +1,18 @@
 ---
-# tasks file for mongodb
-- include_tasks: sysctl.yml
-  when: ansible_os_family == 'RedHat'
+#- include_tasks: sysctl.yml
+#  when: ansible_os_family == 'RedHat'
 
-- include_tasks: chrony.yml
-  when: ansible_os_family == 'RedHat'
+#- include_tasks: chrony.yml
+#  when: ansible_os_family == 'RedHat'
 
-- include_tasks: selinux.yml
-  when: ansible_os_family == 'RedHat'
+#- include_tasks: selinux.yml
+#  when: ansible_os_family == 'RedHat'
 
-- include_tasks: thp.yml
-  when: ansible_os_family == 'RedHat'
+#- include_tasks: thp.yml
+#  when: ansible_os_family == 'RedHat'
 
-- include_tasks: packages.yml
+#- include_tasks: packages.yml
+#  when: ansible_os_family == 'RedHat'
+
+- include_tasks: ulimit.yml
   when: ansible_os_family == 'RedHat'

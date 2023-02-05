@@ -5,3 +5,11 @@
   register: _pkg
   until: _pkg is succeeded
   retries: 3
+
+- name: Make sure numactl is installed
+  package:
+    name: "{{ numactl }}"
+    state: latest
+  register: _pkg
+  until: _pkg is succeeded
+  retries: 3

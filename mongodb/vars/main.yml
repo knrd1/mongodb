@@ -1,6 +1,6 @@
 ---
 # vars file for mongodb
-ntp_package: chrony
+ntp_pkg: chrony
 ntp_service: chronyd
 glibc_pkg: glibc
 numactl_pkg: numactl

@@ -1,6 +1,6 @@
 # Deployment Prerequisites — MongoDB
 
-Configure Linux OS for MongoDB deployment
+Use Ansible to configure Linux OS for MongoDB deployment
 
 ```
 - Disable SELINUX
